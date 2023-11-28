@@ -11,6 +11,8 @@
 <main>
 <?php
 	$Username = $_POST['Username'];
+
+	// hash the password (in other words encrypt the password less stronger than base64encode which is used to encrypt government id)
 	$Password = hash('sha512', $_POST['Password']);
 
 	require 'database.php';

@@ -6,6 +6,7 @@
         <?php require './includes/global-header.php'; ?>
         <img src="images/header.jpg" alt="ICICI Bank Logo" class="logo">
     </header>
+<!-- In this I have also added the functinality to change the current profile image if user wants along with changing other fields as well. -->
 
     <?php
     session_start();
@@ -107,7 +108,10 @@
             exit();
         } 
         
-        else{            
+        else{    
+            
+            // I have encrypted the government id so that nobody could actually see what it exactly is
+            //below code is used to decode the encrypted id to fetch the data
             $key = "%aLJH3.E8afcb8#4";
             $encryptedID = base64_decode(urldecode($_GET['id']));
             $governmentID = openssl_decrypt($encryptedID, 'aes-256-cbc', $key, 0, substr($key, 0, 16));

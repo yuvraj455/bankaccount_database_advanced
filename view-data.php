@@ -8,6 +8,11 @@
 <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
 <link rel="stylesheet" href="css/styles.css" type="text/css">
 
+<!--This view-data.php file is named as view-data in the nav links -->
+<!-- The user can access the view-data without loggin in -->
+<!-- But in the view data webpage when the user clicks either the edit or delete button then if user is not  -->
+<!-- logged in then he/she needs to log in first then click the edit / delete buton again to update or delete the particular data -->
+
     <header>
         <?php require 'includes/global-header.php'; ?>
         <img src="images/header.jpg" alt="ICICI Bank Logo" class="logo">
@@ -68,6 +73,9 @@
                 echo '<td>'; 
 
                 if (isset($_SESSION['Government_ID'])) {
+
+                    // below code encrypt the id so that nobody could actually see what it exactly is
+                    // id will be decoded in the update.php file when the user clicks edit button to fetch data and update it
                     $key = "%aLJH3.E8afcb8#4";
                     $encryptedID = openssl_encrypt($row['Government_ID'], 'aes-256-cbc', $key, 0, substr($key, 0, 16));
                     $encryptedID = urlencode(base64_encode($encryptedID));                    
