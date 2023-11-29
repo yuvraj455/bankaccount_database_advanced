@@ -26,6 +26,10 @@ SET time_zone = "+00:00";
 --
 -- Table structure for table `bankaccount_database`
 --
+DROP DATABASE IF EXISTS 'assignment2';
+CREATE DATABASE 'assignment2';
+USE 'assignment2';
+
 
 DROP TABLE IF EXISTS `bankaccount_database`;
 CREATE TABLE IF NOT EXISTS `bankaccount_database` (
