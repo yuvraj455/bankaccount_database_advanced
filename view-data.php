@@ -7,7 +7,7 @@
 <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
 <link rel="stylesheet" href="css/styles.css" type="text/css">
-
+<title>View Data</title>
 <!--This view-data.php file is named as view-data in the nav links -->
 <!-- The user can access the view-data without loggin in -->
 <!-- But in the view data webpage when the user clicks either the edit or delete button then if user is not  -->
