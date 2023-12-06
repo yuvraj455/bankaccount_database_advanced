@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="css/styles.css" type="text/css">
-
+<title>Update Data</title>
 <body>
 
     <header>
