@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="../css/styles.css" type="text/css">
+<title>Validate</title>
 <header>
 <nav>        
             <ul>
